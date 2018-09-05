@@ -24,14 +24,17 @@ if (isSecondInstance) {
 
 function createWindow() {
   const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
+  console.log(width, height)
   mainWindow = new BrowserWindow({
-    width:1920,
-    height:1080,
+    width,
+    height,
     resizable: false, //窗口是否可以改变尺寸
     frame: false, //带边框窗口
+    autoHideMenuBar:true,
     show: false, //创建时不显示
     useContentSize:true,
     fullscreen:true,
+    alwaysOnTop:true,
     webPreferences: {
       webSecurity: false
     },
@@ -39,7 +42,6 @@ function createWindow() {
   let login = 0;
   mainWindow.on('page-title-updated', (e) => { //监听页面title的变化
     let contents = mainWindow.webContents.getTitle() //网页title
-    console.log(contents)
     if (contents == 'login') {//是否重新登录
       login++;
       mainWindow.loadURL(winURL);
@@ -54,7 +56,6 @@ function createWindow() {
   });
 
   mainWindow.once('ready-to-show', () => { //页面显示完后窗口在显示
-    console.log(mainWindow.getSize())
     mainWindow.setFullScreen(true);
     mainWindow.show();
   });
