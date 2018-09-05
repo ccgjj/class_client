@@ -1,3 +1,4 @@
+const electron = require('electron')
 import { app, BrowserWindow, Notification, ipcMain} from 'electron'
 import { autoUpdater } from 'electron-updater'
 /**
@@ -22,8 +23,10 @@ if (isSecondInstance) {
 }
 
 function createWindow() {
-
+  const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
   mainWindow = new BrowserWindow({
+    width:1920,
+    height:1080,
     resizable: false, //窗口是否可以改变尺寸
     frame: false, //带边框窗口
     show: false, //创建时不显示
@@ -51,6 +54,7 @@ function createWindow() {
   });
 
   mainWindow.once('ready-to-show', () => { //页面显示完后窗口在显示
+    console.log(mainWindow.getSize())
     mainWindow.setFullScreen(true);
     mainWindow.show();
   });
