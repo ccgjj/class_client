@@ -1,0 +1,9 @@
+version: 0.0.1
+files:
+  - url: pass-0.0.1-x86_64.AppImage
+    sha512: qktJg+JkUjydktldIYSkKyV4orWL5PfXENh0z0aqSiYq8fFVMp57MnuIinehIwQk3xBBjw6HnVCmz7+qH58ebg==
+    size: 52740588
+    blockMapSize: 56112
+path: pass-0.0.1-x86_64.AppImage
+sha512: qktJg+JkUjydktldIYSkKyV4orWL5PfXENh0z0aqSiYq8fFVMp57MnuIinehIwQk3xBBjw6HnVCmz7+qH58ebg==
+releaseDate: '2018-09-05T04:39:21.194Z'
