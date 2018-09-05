@@ -48,6 +48,7 @@ export default {
   methods: {
     login_() {
       //表单验证
+      alert(1)
       var ths = this;
       ths.$refs.login_form.validate(valid => {
         if (valid) {

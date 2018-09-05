@@ -23,11 +23,10 @@ if (isSecondInstance) {
 }
 
 function createWindow() {
-  const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
   console.log(width, height)
   mainWindow = new BrowserWindow({
-    width,
-    height,
+    width:1920,
+    height:1080,
     resizable: false, //窗口是否可以改变尺寸
     frame: false, //带边框窗口
     autoHideMenuBar:true,
@@ -35,6 +34,7 @@ function createWindow() {
     useContentSize:true,
     fullscreen:true,
     alwaysOnTop:true,
+    type:'desktop',
     webPreferences: {
       webSecurity: false
     },
