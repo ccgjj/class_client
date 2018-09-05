@@ -29,12 +29,10 @@ function createWindow() {
     height:1080,
     resizable: false, //窗口是否可以改变尺寸
     frame: false, //带边框窗口
-    autoHideMenuBar:true,
     show: false, //创建时不显示
     useContentSize:true,
     fullscreen:true,
     alwaysOnTop:true,
-    type:'desktop',
     webPreferences: {
       webSecurity: false
     },
