@@ -23,7 +23,6 @@ if (isSecondInstance) {
 }
 
 function createWindow() {
-  console.log(width, height)
   mainWindow = new BrowserWindow({
     width:1920,
     height:1080,
