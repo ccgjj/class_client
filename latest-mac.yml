@@ -1,0 +1,10 @@
+version: 0.0.1
+files:
+  - url: client1-0.0.1-mac.zip
+    sha512: 6pcYAa4Y7Yg1wJYf4rT5Qg0GKuxCHBMkMie6o5lziUyK32EARUFhNTInzZVhioVeAiWe1MW/Tue2ESPu1YLruA==
+  - url: client1-0.0.1.dmg
+    sha512: PUJhHJ/Y2QO9CO7MnzVG/kQAIpQLW99yHzraBOyfQQ89EE+7VadNAUN6z4K89i0mL4Afi3DKN/q2eLF9Z/H4Aw==
+    size: 52272033
+path: client1-0.0.1-mac.zip
+sha512: 6pcYAa4Y7Yg1wJYf4rT5Qg0GKuxCHBMkMie6o5lziUyK32EARUFhNTInzZVhioVeAiWe1MW/Tue2ESPu1YLruA==
+releaseDate: '2018-09-05T04:29:09.156Z'
