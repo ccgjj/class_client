@@ -48,7 +48,6 @@ export default {
   methods: {
     login_() {
       //表单验证
-      alert(1)
       var ths = this;
       ths.$refs.login_form.validate(valid => {
         if (valid) {
@@ -94,11 +93,12 @@ h6 {
 }
 .login {
   background: #a4ecc7;
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 .center {
   width: 400px;

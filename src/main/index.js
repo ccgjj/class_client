@@ -29,7 +29,6 @@ function createWindow() {
     resizable: false, //窗口是否可以改变尺寸
     frame: false, //带边框窗口
     show: false, //创建时不显示
-    useContentSize:true,
     fullscreen:true,
     alwaysOnTop:true,
     webPreferences: {
