@@ -17,10 +17,10 @@
                         <i slot="prefix" class="iconfont">&#xe6d2;</i>
                         </el-input>
                     </el-form-item>
-                    <el-form-item class="radio_">
+                    <!-- <el-form-item class="radio_">
                       <el-radio v-model="user_info.type" :label='0'>横屏</el-radio>
                       <el-radio v-model="user_info.type" :label='1'>竖屏</el-radio>
-                    </el-form-item>
+                    </el-form-item> -->
                     <el-form-item>
                         <el-button type="primary" size="medium" @click="login_" :loading="load">登录</el-button>
                     </el-form-item>
@@ -36,7 +36,7 @@ export default {
       user_info: {
         username: "",
         password: "",
-        type:0
+        type:0,//0-横屏，1-竖屏
       },
       load: false,
       rules: {
@@ -82,7 +82,15 @@ export default {
     }
   },
   created() {
-    var ths = this;
+    var ths = this,width=0,height=0;
+    //自动检测横屏竖屏
+    width = window.screen.width;
+    height = window.screen.height;
+    if(width==1920&&height==1080){
+      ths.user_info.type = 0;
+    }else if(width==1080&&height==1920){
+      ths.user_info.type = 1;
+    }
   }
 };
 </script>
