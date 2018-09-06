@@ -23,9 +23,10 @@ if (isSecondInstance) {
 }
 
 function createWindow() {
+  const { width, height } = electron.screen.getPrimaryDisplay().size;
   mainWindow = new BrowserWindow({
-    width:1920,
-    height:1080,
+    width,
+    height,
     resizable: false, //窗口是否可以改变尺寸
     frame: false, //带边框窗口
     show: false, //创建时不显示
@@ -50,7 +51,6 @@ function createWindow() {
          autoUpdater.quitAndInstall();
     }
   });
-
   mainWindow.once('ready-to-show', () => { //页面显示完后窗口在显示
     mainWindow.setFullScreen(true);
     mainWindow.show();
